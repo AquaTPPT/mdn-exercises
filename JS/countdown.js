@@ -1,12 +1,30 @@
-const output = document.querySelector(".output");
-output.textContent = "";
+// const output = document.querySelector(".output"); 
+// output.textContent = "";
 
 let i = 10;
-do {
---i;
-console.log(i);
+
+console.log('COUNTDOWN:')
+
+function startCountdown() {
+
+    function countdown() {
+        while (i > 0) {
+
+            console.log(i + '...')
+
+            --i
+
+        }
+        if (i == 0) {
+
+            console.log('Lift off!!')
+
+        }
+    }
+    countdown()
 }
-while (i > 1)
+
+startCountdown()
 
 // let i = 10;
 
