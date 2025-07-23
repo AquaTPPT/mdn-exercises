@@ -3,31 +3,64 @@
 
 let i = 10;
 
-console.log('COUNTDOWN:')
+const output = document.querySelector(".output");
+output.textContent = "";
 
-function startCountdown() {
-
+const para = document.createElement('p');
+    
     function countdown() {
         while (i > 0) {
+            
+            if (i == 10) {
 
-            console.log(i + '...')
+                para.textContent = "COUNTDOWN: " + i + "...";
+            
+            }
 
-            --i
+            else if (i == 0) {
+            
+                para.textContent = 'Blast off!!';
+            
+            }
+
+            else {
+
+               para.textContent = i + "...";
+            
+            }
+            
+            output.appendChild(para);
+
+            --i;
 
         }
-        if (i == 0) {
 
-            console.log('Lift off!!')
-
-        }
     }
-    countdown()
-}
 
-startCountdown()
 
 // let i = 10;
 
-// const para = document.createElement('p');
+// 
 // para.textContent = ;
-// output.appendChild(para);
+// 
+const output = document.querySelector(".output");
+output.textContent = "";
+
+let i = 10;
+
+function countdown() {
+  while (i >= 0) {
+    const para = document.createElement("p");
+    if (i === 10) {
+      para.textContent = "COUNTDOWN: " + i + "...";
+    } else if (i === 0) {
+      para.textContent = "Blast off!!";
+    } else {
+      para.textContent = i;
+    }
+
+    output.appendChild(para);
+
+    i--;
+  }
+}
